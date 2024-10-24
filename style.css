@@ -1,0 +1,179 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+    color: #fff;
+}
+
+.logout {
+    text-align: right;
+}
+
+.logout a {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout a:hover {
+    background-color: #c82333;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #fff;
+}
+
+.add-todo-form, .add-task-form {
+    margin-bottom: 30px;
+}
+
+.add-todo-form input, .add-task-form input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-todo-form button, .add-task-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-todo-form button:hover, .add-task-form button:hover {
+    background-color: #218838;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.todo-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #d4edda;
+}
+
+.todo-list li.incomplete {
+    color: #721c24;
+    background-color: #f8d7da;
+}
+
+.todo-list li form {
+    display: inline;
+}
+
+.todo-list li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.todo-list li button:hover {
+    text-decoration: underline;
+}
+
+.todo-list li a {
+    color: red;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.todo-list li a:hover {
+    color: darkred;
+}
+
+/* Dark mode styles for buttons and inputs */
+body.dark-mode .add-todo-form input, body.dark-mode .add-task-form input {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+body.dark-mode .add-todo-form button, body.dark-mode .add-task-form button {
+    background-color: #28a745;
+    color: white;
+}
+
+body.dark-mode .add-todo-form button:hover, body.dark-mode .add-task-form button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode .todo-list li {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .todo-list li.completed {
+    background-color: #3c763d;
+    color: #d4edda;
+}
+
+body.dark-mode .todo-list li.incomplete {
+    background-color: #a94442;
+    color: #f2dede;
+}
